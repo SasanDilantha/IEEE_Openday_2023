@@ -1,5 +1,6 @@
-import React, {useCallback, useState } from "react";
+import React, { useCallback, useState } from "react";
 import UniImage from "../images/uni.png";
+import axios from "axios";
 
 const Register = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -16,10 +17,8 @@ const Register = () => {
           Registration
         </h1>
         <form
-          action="https://docs.google.com/forms/d/e/1FAIpQLSesoEWBEdjh1pYmkZ1LNegNeSDzmal2qYWKwUtKBBD9V96L5w/formResponse"
-          method="post"
-          target="confromSubmitted"
-          onSubmit={onSubmit}
+          id="form"
+          onSubmit={(e) => onSubmit(e)}
           className="text-white"
         >
           <div className="">
@@ -30,7 +29,7 @@ const Register = () => {
               </p>
               <input
                 type="text"
-                name="entry.703240887"
+                name="First_Name"
                 id=""
                 required
                 className="w-full rounded-md bg-slate-600 p-1 focus:outline-none md:w-2/3"
@@ -43,7 +42,7 @@ const Register = () => {
               </span>
               <input
                 type="text"
-                name="entry.1853836985"
+                name="Last_Name"
                 id=""
                 required
                 className="w-full rounded-md bg-slate-600 p-1 focus:outline-none md:w-2/3"
@@ -56,7 +55,7 @@ const Register = () => {
               </span>
               <input
                 type="email"
-                name="entry.333595862"
+                name="Email_Address"
                 id=""
                 required
                 className="w-full rounded-md bg-slate-600 p-1 focus:outline-none md:w-2/3"
@@ -69,7 +68,7 @@ const Register = () => {
               </span>
               <input
                 type="text"
-                name="entry.1514187970"
+                name="Membership_ID"
                 id=""
                 className="w-full rounded-md bg-slate-600 p-1 focus:outline-none md:w-2/3"
               />
@@ -83,7 +82,7 @@ const Register = () => {
                   <input
                     type="radio"
                     id="cst"
-                    name="entry.608879458"
+                    name="Degree_Program"
                     value="CST"
                   />
                   <label htmlFor="CST">&ensp;CST</label>
@@ -91,7 +90,7 @@ const Register = () => {
                   <input
                     type="radio"
                     id="iit"
-                    name="entry.608879458"
+                    name="Degree_Program"
                     value="IIT"
                   />
                   <label htmlFor="IIT">&ensp;IIT</label>
@@ -99,7 +98,7 @@ const Register = () => {
                   <input
                     type="radio"
                     id="sct"
-                    name="entry.608879458"
+                    name="Degree_Program"
                     value="SCT"
                   />
                   <label htmlFor="SCT">&ensp;SCT</label>
@@ -107,7 +106,7 @@ const Register = () => {
                   <input
                     type="radio"
                     id="ict"
-                    name="entry.608879458"
+                    name="Degree_Program"
                     value="ICT"
                   />
                   <label htmlFor="ICT">&ensp;ICT</label>
@@ -117,7 +116,7 @@ const Register = () => {
               <span>Year</span>
               <div className="">
                 <select
-                  name="entry.1691493250"
+                  name="Year"
                   id=""
                   className="rounded-md bg-slate-600 px-4 py-1"
                 >
@@ -137,7 +136,7 @@ const Register = () => {
               </span>
               <input
                 type="text"
-                name="entry.472681115"
+                name="Mobile_Number"
                 id=""
                 required
                 className="w-full rounded-md bg-slate-600 p-1 focus:outline-none md:w-2/3"
@@ -191,9 +190,23 @@ const Register = () => {
       </div>
     );
   };
-  const onSubmit = useCallback(() => {
-    setSubmitted(true);
-  }, [setSubmitted]);
+  const onSubmit = useCallback(
+    (e) => {
+      e.preventDefault();
+      const form = document.getElementById("form");
+      const formData = new FormData(form);
+
+      axios
+        .post(
+          "https://script.google.com/macros/s/AKfycbxsoxE_BmQ9zh5f4sJVrIJYlJQp8wPCNxzhF9r_ef8qxMRRjFvIb_TacfnnqnG5hABoxA/exec",
+          formData
+        )
+        .then((res) => console.log(res))
+        .then(setSubmitted(true))
+        .catch((err) => console.log(err));
+    },
+    [setSubmitted]
+  );
   return (
     <React.Fragment>
       <div

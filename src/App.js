@@ -9,7 +9,7 @@ const Register = lazy(() => import("./pages/Register"));
 const Membership = lazy(() => import("./pages/Membership"));
 const Committee23 = lazy(() => import("./pages/Committee23"));
 const Gallery = lazy(() => import("./pages/Gallery"));
-const Error = lazy(() => import("./pages/Error"));
+const Error = lazy(() => import("./pages/Error"))
 
 const linkArray = {
   "/": <Home />,
