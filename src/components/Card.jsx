@@ -3,7 +3,7 @@ import React from 'react'
 const Card = ({image , title , content , link}) => {
     return (
       <React.Fragment>
-        <div className="flex flex-col rounded-xl bg-slate-600 max-w-xl overflow-hidden">
+        <div className="flex flex-col mx-2 rounded-xl bg-slate-600 max-w-xl overflow-hidden">
           <img src={image} alt="card"/>
           <h3 className="px-3 text-xl font-bold text-white">{title}</h3>
           <p className="px-3 text-md text-white italic mt-1">{content}</p>

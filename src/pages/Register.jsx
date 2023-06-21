@@ -111,6 +111,14 @@ const Register = () => {
                   />
                   <label htmlFor="ICT">&ensp;ICT</label>
                   <br />
+                  <input
+                    type="radio"
+                    id="e-tech"
+                    name="Degree_Program"
+                    value="E-TECH"
+                  />
+                  <label htmlFor="E-TECH">&ensp;E-TECH</label>
+                  <br />
                 </div>
               </div>
               <span>Year</span>

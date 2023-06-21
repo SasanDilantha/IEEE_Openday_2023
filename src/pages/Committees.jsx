@@ -20,7 +20,7 @@ const Committees = () => {
           content={
             "Discover our dedicated committees fostering technical excellence and professional growth."
           }
-          link={"/committee_2023"}
+          link={"/committee23"}
         />
       </div>
     </React.Fragment>

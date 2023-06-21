@@ -124,7 +124,7 @@ const Home = () => {
       {/* why you should join with us */}
       <div
         id="benefits"
-        className="flex h-[130vh] flex-col items-center justify-center bg-cover px-2 py-5 md:h-screen"
+        className="flex h-[180vh] sm:h-[130vh] flex-col items-center justify-center bg-cover px-2 py-5 md:h-screen"
         style={{
           backgroundImage:
             "linear-gradient(rgba(0, 7, 27, 0.8) 0%, rgba(54, 57, 66, 0.6)) , " +

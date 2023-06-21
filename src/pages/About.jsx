@@ -5,14 +5,14 @@ const About = () => {
   return (
     <React.Fragment>
       <div
-        className="-mt-2 flex h-screen items-center justify-center bg-slate-900 bg-cover"
+        className="-mt-2 h-[180vh] sm:h-[130vh] flex md:h-screen items-center justify-center bg-slate-900 bg-cover"
         style={{
           backgroundImage:
             "linear-gradient(rgba(0, 7, 27, 0.8) 0%, rgba(54, 57, 66, 0.6)) ," +
             `url(${OpenDayLogo})`,
         }}
       >
-        <div className="my-2 max-w-3xl items-center rounded-md bg-purple-600 p-3 text-center font-kumbha text-xl text-white shadow-2xl shadow-purple-500/50 duration-300 ease-in hover:rotate-6 hover:bg-emerald-500 hover:shadow-emerald-500/50 lg:p-8">
+        <div className="m-2 font-md max-w-3xl items-center rounded-md bg-purple-600 p-3 text-center font-kumbha text-xl text-white shadow-2xl shadow-purple-500/50 duration-300 ease-in hover:rotate-6 hover:bg-emerald-500 hover:shadow-emerald-500/50 lg:p-8">
           <p>
             UWU IEEE Student Branch is a group of passionate and dedicated
             students who are committed to promoting technology and engineering

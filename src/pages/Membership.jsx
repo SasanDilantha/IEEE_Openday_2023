@@ -114,6 +114,14 @@ const Membership = () => {
                   />
                   <label htmlFor="ICT">&ensp;ICT</label>
                   <br />
+                                    <input
+                    type="radio"
+                    id="e-tech"
+                    name="entry.635035616"
+                    value="E-TECH"
+                  />
+                  <label htmlFor="E-TECH">&ensp;E-TECH</label>
+                  <br />
                 </div>
               </div>
               <div className="mb-3">
