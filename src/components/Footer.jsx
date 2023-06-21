@@ -26,12 +26,12 @@ const Footer = () => {
           </div>
           <div className="text-center text-white">
             <p className="">
-              <span className="font-bold">Ovidu (Chair : IEEE SB)</span> <br />{" "}
+              <span className="font-bold">Ovindu (Chairperson : IEEE UWU SB)</span> <br />{" "}
               +94 702500806
             </p>
             <p className="">
               <span className="font-bold">
-                Milani (Project-Chair : IEEE SB)
+                Milani (Project-Chair : IEEE Openday 2023)
               </span>
               <br /> +94 769847175
             </p>

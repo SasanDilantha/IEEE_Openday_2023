@@ -114,13 +114,21 @@ const Membership = () => {
                   />
                   <label htmlFor="ICT">&ensp;ICT</label>
                   <br />
-                                    <input
+                  <input
                     type="radio"
                     id="e-tech"
                     name="entry.635035616"
                     value="E-TECH"
                   />
                   <label htmlFor="E-TECH">&ensp;E-TECH</label>
+                  <br />
+                  <input
+                    type="radio"
+                    id="others"
+                    name="entry.635035616"
+                    value="Others"
+                  />
+                  <label htmlFor="Others">&ensp;Others</label>
                   <br />
                 </div>
               </div>

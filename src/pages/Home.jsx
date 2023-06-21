@@ -147,24 +147,35 @@ const Home = () => {
         </h4>
 
         <div className="mt-5 grid w-fit grid-cols-1 grid-rows-4 gap-3 sm:mx-5 md:mt-10 md:grid-cols-2 md:grid-rows-2">
+          
           <NeonCard
             text={
-              "The IEEEXtreme is open for participation to those who have obtained IEEE membership (international), and similarly, obtaining student branch membership enables you to participate in Codify"
+              "Only members who have obtained student branch membership are eligible to apply for positions within the organizing committees of the projects conducted by the student branch."
             }
           />
           <NeonCard
             text={
-              " When you apply for national volunteering, you will be recommended through our student branch."
+              "When you join IEEE, you gain access to a wide range of opportunities and events, both at the university level and beyond such as IMPETUS and JamborIEEE."
+            }
+          />
+          <NeonCard
+            text={
+              "When you start working on your research, past seniors who have worked on topics related to your research area will be connected in order to secure support for you."
+            }
+          />
+          <NeonCard
+            text={
+              "When you apply for national volunteering, you will be recommended through our student branch."
+            }
+          />
+          <NeonCard
+            text={
+              "The IEEEXtreme is open for participation to those who have obtained IEEE membership (International), and similarly, obtaining student branch membership enables you to participate in Codify."
             }
           />
           <NeonCard
             text={
               "An E-certificate, including the membership number, will be issued."
-            }
-          />
-          <NeonCard
-            text={
-              "When you start working on your research, past seniors related to your research will be contacted in order to secure support for you."
             }
           />
         </div>

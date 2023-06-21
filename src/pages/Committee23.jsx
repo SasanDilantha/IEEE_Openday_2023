@@ -65,7 +65,7 @@ const Committee23 = () => {
           <div className="gap my-10 grid w-fit grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 xl:grid-cols-4 xl:grid-rows-1">
             <OCPOsition
               image={program["Achila_Thilakarathna.png"]}
-              person={"Achila Thilakarathna<"}
+              person={"Achila Thilakarathna"}
               position={"Program Team Lead"}
             />
 
@@ -102,7 +102,7 @@ const Committee23 = () => {
 
             <OCPOsition
               image={design["Gihan_Vimukthi.png"]}
-              person={"Gihan Vimukt"}
+              person={"Gihan Vimukthi"}
               position={"Design Team Member"}
             />
 
@@ -114,7 +114,7 @@ const Committee23 = () => {
 
             <OCPOsition
               image={design["yeran_lakvidu.png"]}
-              person={"Yeran Lakvid"}
+              person={"Yeran Lakvidu"}
               position={"Design Team Member"}
             />
           </div>

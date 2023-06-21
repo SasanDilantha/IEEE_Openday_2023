@@ -33,7 +33,7 @@ const Gallery = () => {
         {(() => {
           const options = [];
 
-          for (let i = 1; i <= 57; i++) {
+          for (let i = 1; i <= 56; i++) {
             options.push(
               <img
                 src={images[i + ".jpg"]}
