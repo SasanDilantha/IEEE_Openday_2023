@@ -47,7 +47,7 @@ const Header = () => {
           <HeaderLinks link={"/gallery"} text={"Gallery"} />
           <a
             href="/register"
-            className="ms-3 mt-5 rounded-md bg-orange-600 px-3 py-1 font-semibold text-white duration-300 ease-in hover:bg-teal-600 md:mt-1"
+            className="mx-3 mt-5 rounded-md bg-orange-600 px-3 py-1 font-semibold text-white duration-300 ease-in hover:bg-teal-600 md:mt-1"
           >
             Register Now
           </a>
