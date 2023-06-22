@@ -1,24 +1,25 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import UniImage from "../images/uni.png";
+import axios from "axios";
 
 const Membership = () => {
   const [submitted, setSubmitted] = useState(false);
+  useEffect(() => {
+    const count = new Date("June 25, 2023 08:00:00").getTime();
+    const now = new Date().getTime();
+    if((count - now) > 0){
+      window.location.replace("/error")
+    };
+  });
   const form = () => {
     return (
-      <div className="mt-10 max-w-5xl rounded-sm bg-[#0f172aaa] px-5 py-10 md:w-3/4">
+      <div className="mt-10 max-w-5xl rounded-md bg-[#0f172aaa] px-5 py-10 md:w-11/12">
         <h1 className="mb-6 text-center text-3xl font-bold text-white">
           Get Membership
         </h1>
-        <iframe
-          title="membership"
-          name="confromSubmitted"
-          id="con{fromSubmitted"
-          style={{ display: "none" }}
-        ></iframe>
         <form
-          action="https://docs.google.com/forms/d/e/1FAIpQLSdu5mwdDorhuWqAe_PNqa4WJdd05-SU2yzw6Oyh_1pRugjwIw/formResponse"
+          id="form"
           method="post"
-          target="confromSubmitted"
           onSubmit={onSubmit}
           className="text-white"
         >
@@ -30,7 +31,7 @@ const Membership = () => {
               </p>
               <input
                 type="text"
-                name="entry.1705055452"
+                name="Full_Name"
                 placeholder="First name + Middle name + Last name"
                 id=""
                 required
@@ -44,7 +45,7 @@ const Membership = () => {
               </span>
               <input
                 type="text"
-                name="entry.1850360640"
+                name="Enrollment_number"
                 id=""
                 placeholder="UWU/CST/20/001"
                 required
@@ -53,12 +54,12 @@ const Membership = () => {
             </div>
             <div className="my-2 justify-between md:flex">
               <span>
-                Address{" "}
-                <span className="text-xs font-extrabold text-red-600">*</span>
+                Address
+                <span className="text-xs font-extrabold text-red-600"> *</span>
               </span>
               <input
                 type="text"
-                name="entry.1820933384"
+                name="Address"
                 id=""
                 required
                 className="w-full rounded-md bg-slate-600 p-1 px-2 focus:outline-none md:w-2/3"
@@ -71,7 +72,7 @@ const Membership = () => {
               </span>
               <input
                 type="date"
-                name="entry.190317731"
+                name="DOB"
                 id=""
                 className="w-full rounded-md bg-slate-600 p-1 focus:outline-none md:w-2/3"
               />
@@ -85,7 +86,7 @@ const Membership = () => {
                   <input
                     type="radio"
                     id="cst"
-                    name="entry.635035616"
+                    name="Degree_Program"
                     value="CST"
                   />
                   <label htmlFor="CST">&ensp;CST</label>
@@ -93,7 +94,7 @@ const Membership = () => {
                   <input
                     type="radio"
                     id="iit"
-                    name="entry.635035616"
+                    name="Degree_Program"
                     value="IIT"
                   />
                   <label htmlFor="IIT">&ensp;IIT</label>
@@ -101,7 +102,7 @@ const Membership = () => {
                   <input
                     type="radio"
                     id="sct"
-                    name="entry.635035616"
+                    name="Degree_Program"
                     value="SCT"
                   />
                   <label htmlFor="SCT">&ensp;SCT</label>
@@ -109,7 +110,7 @@ const Membership = () => {
                   <input
                     type="radio"
                     id="ict"
-                    name="entry.635035616"
+                    name="Degree_Program"
                     value="ICT"
                   />
                   <label htmlFor="ICT">&ensp;ICT</label>
@@ -117,7 +118,7 @@ const Membership = () => {
                   <input
                     type="radio"
                     id="e-tech"
-                    name="entry.635035616"
+                    name="Degree_Program"
                     value="E-TECH"
                   />
                   <label htmlFor="E-TECH">&ensp;E-TECH</label>
@@ -125,7 +126,7 @@ const Membership = () => {
                   <input
                     type="radio"
                     id="others"
-                    name="entry.635035616"
+                    name="Degree_Program"
                     value="Others"
                   />
                   <label htmlFor="Others">&ensp;Others</label>
@@ -135,18 +136,13 @@ const Membership = () => {
               <div className="mb-3">
                 <span>Gender</span>
                 <div className="ms-10">
-                  <input
-                    type="radio"
-                    id="male"
-                    name="entry.927652962"
-                    value="Male"
-                  />
+                  <input type="radio" id="male" name="Gender" value="Male" />
                   <label htmlFor="Male">&ensp;Male</label>
                   <br />
                   <input
                     type="radio"
                     id="female"
-                    name="entry.927652962"
+                    name="Gender"
                     value="Female"
                   />
                   <label htmlFor="Female">&ensp;Female</label>
@@ -155,15 +151,15 @@ const Membership = () => {
               <span>Year</span>
               <div className="">
                 <select
-                  name="entry.1827166823"
+                  name="Year"
                   id=""
                   className="rounded-md bg-slate-600 px-4 py-1"
                 >
-                  <option value="1st_year" defaultValue={true}>
+                  <option value="1st year" defaultValue={true}>
                     1st Year
                   </option>
-                  <option value="2nd_year">2nd Year</option>
-                  <option value="3rd_year">3rd Year</option>
+                  <option value="2nd year">2nd Year</option>
+                  <option value="3rd year">3rd Year</option>
                 </select>
               </div>
             </div>
@@ -175,7 +171,7 @@ const Membership = () => {
               </span>
               <input
                 type="text"
-                name="entry.1226361252"
+                name="Mobile_Number"
                 id=""
                 required
                 className="w-full rounded-md bg-slate-600 p-1 px-2 focus:outline-none md:w-2/3"
@@ -184,12 +180,12 @@ const Membership = () => {
 
             <div className="my-2 justify-between md:flex">
               <span>
-                Email Address{" "}
-                <span className="text-xs font-extrabold text-red-600">*</span>
+                Email Address
+                <span className="text-xs font-extrabold text-red-600"> *</span>
               </span>
               <input
                 type="email"
-                name="entry.1579684155"
+                name="Email_Address"
                 id=""
                 required
                 className="w-full rounded-md bg-slate-600 p-1 px-2 focus:outline-none md:w-2/3"
@@ -198,11 +194,11 @@ const Membership = () => {
             <div className="my-2 justify-between md:flex">
               <span>
                 IEEE Membership ID{" "}
-                <small className="italic">( if you have )</small>
+                <small className="italic">(if you have)</small>
               </span>
               <input
                 type="text"
-                name="entry.330262776"
+                name="Membership_ID"
                 id=""
                 className="w-full rounded-md bg-slate-600 p-1 focus:outline-none md:w-2/3"
               />
@@ -238,13 +234,27 @@ const Membership = () => {
       </div>
     );
   };
-  const onSubmit = useCallback(() => {
-    setSubmitted(true);
-  }, [setSubmitted]);
+  const onSubmit = useCallback(
+    (e) => {
+      e.preventDefault();
+      const form = document.getElementById("form");
+      const formData = new FormData(form);
+
+      axios
+        .post(
+          "https://script.google.com/macros/s/AKfycbxj9JZNUkZIM-cShIiQcNEZb0ssZ1r-0JvO5hUG5GK-WHOE1xyLBqLoupCDOIjdBN2TRg/exec",
+          formData
+        )
+        .then((res) => console.log(res))
+        .then(setSubmitted(true))
+        .catch((err) => console.log(err));
+    },
+    [setSubmitted]
+  );
   return (
     <React.Fragment>
       <div
-        className="flex h-[130vh] flex-col items-center justify-center bg-cover px-2 py-5 md:h-screen"
+        className="flex h-auto min-h-screen flex-col items-center justify-center bg-cover px-2 py-16"
         style={{
           backgroundImage:
             "linear-gradient(rgba(0, 7, 27, 0.8) 0%, rgba(54, 57, 66, 0.6)) , " +

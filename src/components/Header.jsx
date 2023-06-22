@@ -42,7 +42,7 @@ const Header = () => {
           className="fixed -right-80 top-0 z-40 flex h-screen flex-col items-center bg-slate-700 pe-4 ps-3 pt-10 duration-300 md:relative md:right-0 md:h-auto md:flex-row md:bg-transparent md:pt-0"
         >
           <HeaderLinks link={"/about"} text={"About"} />
-          <HeaderLinks link={"#benefits"} text={"Benefits"} />
+          <HeaderLinks link={"/#benefits"} text={"Benefits"} />
           <HeaderLinks link={"/committees"} text={"Committees"} />
           <HeaderLinks link={"/gallery"} text={"Gallery"} />
           <a

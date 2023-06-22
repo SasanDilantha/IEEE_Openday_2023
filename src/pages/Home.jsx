@@ -77,7 +77,7 @@ const Home = () => {
         </h2>
 
         <div className="flex flex-col items-center">
-          <div className="mt-10 grid w-fit grid-cols-1 grid-rows-2 place-items-center gap-4 px-5 md:flex lg:grid-cols-2 lg:grid-rows-1">
+          <div className="mt-10 grid w-fit grid-cols-1 grid-rows-2 place-items-center gap-4 px-5 md:grid-cols-2 md:grid-rows-1">
             <Card
               image={Com23}
               title={"Our Committees"}
@@ -124,7 +124,7 @@ const Home = () => {
       {/* why you should join with us */}
       <div
         id="benefits"
-        className="flex h-[180vh] sm:h-[130vh] flex-col items-center justify-center bg-cover px-2 py-5 md:h-screen"
+        className="flex h-[210vh] sm:h-[150vh] flex-col items-center justify-center bg-cover px-2 py-5 md:h-screen"
         style={{
           backgroundImage:
             "linear-gradient(rgba(0, 7, 27, 0.8) 0%, rgba(54, 57, 66, 0.6)) , " +

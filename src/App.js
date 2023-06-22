@@ -8,6 +8,7 @@ const Committees = lazy(() => import("./pages/Committees"));
 const Register = lazy(() => import("./pages/Register"));
 const Membership = lazy(() => import("./pages/Membership"));
 const Committee23 = lazy(() => import("./pages/Committee23"));
+const Committee22 = lazy(() => import("./pages/Committee22"));
 const Gallery = lazy(() => import("./pages/Gallery"));
 const Error = lazy(() => import("./pages/Error"))
 
@@ -18,6 +19,7 @@ const linkArray = {
   "/register": <Register />,
   "/membership": <Membership />,
   "/committee23": <Committee23 />,
+  "/committee22": <Committee22 />,
   "/gallery": <Gallery />,
 };
 

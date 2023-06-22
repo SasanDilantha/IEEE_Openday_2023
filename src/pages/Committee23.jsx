@@ -1,6 +1,6 @@
 import React from "react";
 import OpenDayLogo from "../images/logo-2023.png";
-import Milani from "../images/Y_Milani.png";
+import Milani from "../images/OC23/Y_Milani.png";
 import OCPOsition from "../components/OCPosition";
 
 const Committee23 = () => {
@@ -12,26 +12,44 @@ const Committee23 = () => {
     return images;
   }
   const program = importAll(
-    require.context("../images/Program_Team/", false, /.\png/)
+    require.context("../images/OC23/Program_Team/", false, /.(png|jpe?g|svg)$/)
   );
 
   const logistics = importAll(
-    require.context("../images/Logistics_Team/", false, /.\png/)
+    require.context(
+      "../images/OC23/Logistics_Team/",
+      false,
+      /.(png|jpe?g|svg)$/
+    )
   );
 
   const design = importAll(
-    require.context("../images/Design_Team/", false, /.\png/)
+    require.context("../images/OC23/Design_Team/", false, /.(png|jpe?g|svg)$/)
   );
 
   const publicity = importAll(
-    require.context("../images/Publicity_Team/", false, /.\png/)
+    require.context(
+      "../images/OC23/Publicity_Team/",
+      false,
+      /.(png|jpe?g|svg)$/
+    )
   );
 
   const secretary = importAll(
-    require.context("../images/Secretary_Team/", false, /.\png/)
+    require.context(
+      "../images/OC23/Secretary_Team/",
+      false,
+      /.(png|jpe?g|svg)$/
+    )
   );
 
-  const web = importAll(require.context("../images/Web_Team/", false, /.\png/));
+  const treasurer = importAll(
+    require.context("../images/OC23/Treasurer/", false, /.(png|jpe?g|svg)$/)
+  );
+
+  const web = importAll(
+    require.context("../images/OC23/Web_Team/", false, /.(png|jpe?g|svg)$/)
+  );
   return (
     <React.Fragment>
       <div
@@ -53,7 +71,7 @@ const Committee23 = () => {
         <div className="my-10 flex justify-center">
           <OCPOsition
             image={Milani}
-            person={"Milani"}
+            person={"Yogeswaran Milani"}
             position={"Project Chair"}
           />
         </div>
@@ -62,7 +80,7 @@ const Committee23 = () => {
           Program Team
         </h3>
         <div className="flex justify-center">
-          <div className="gap my-10 grid w-fit grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 xl:grid-cols-4 xl:grid-rows-1">
+          <div className="my-10 grid gap-5 w-fit grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 xl:grid-cols-4 xl:grid-rows-1">
             <OCPOsition
               image={program["Achila_Thilakarathna.png"]}
               person={"Achila Thilakarathna"}
@@ -90,10 +108,21 @@ const Committee23 = () => {
         </div>
 
         <h3 className="mt-10 text-2xl font-bold text-cyan-400 md:text-3xl">
+          Treasurer
+        </h3>
+        <div className="my-10 flex justify-center">
+          <OCPOsition
+            image={treasurer["ranidu.jpg"]}
+            person={"Ranidu Harshana"}
+            position={"Treasurer"}
+          />
+        </div>
+
+        <h3 className="mt-10 text-2xl font-bold text-cyan-400 md:text-3xl">
           Design Team
         </h3>
         <div className="flex justify-center">
-          <div className="gap my-10 grid w-fit grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 xl:grid-cols-4 xl:grid-rows-1">
+          <div className="my-10 grid gap-5 w-fit grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 xl:grid-cols-4 xl:grid-rows-1">
             <OCPOsition
               image={design["Yasith_Eranda.png"]}
               person={"Yasith Eranda"}
@@ -124,7 +153,7 @@ const Committee23 = () => {
           Secretary Team
         </h3>
         <div className="flex justify-center">
-          <div className="gap my-10 grid w-fit grid-cols-1 grid-rows-3 md:grid-cols-2 md:grid-rows-2 xl:grid-cols-3 xl:grid-rows-1">
+          <div className="my-10 grid gap-5 w-fit grid-cols-1 grid-rows-3 md:grid-cols-2 md:grid-rows-2 xl:grid-cols-3 xl:grid-rows-1">
             <OCPOsition
               image={secretary["Sanuvi_Lokugamage.png"]}
               person={"Sanuvi Lokugamage"}
@@ -149,9 +178,9 @@ const Committee23 = () => {
           Publicity Team
         </h3>
         <div className="flex justify-center">
-          <div className="gap my-10 grid w-fit grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
+          <div className="my-10 grid gap-5 w-fit grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
             <OCPOsition
-              image={publicity["Kavindu Manahara.png"]}
+              image={publicity["Kavindu_Manahara.png"]}
               person={"Kavindu Manahara"}
               position={"Publicity Team Lead"}
             />
@@ -168,7 +197,7 @@ const Committee23 = () => {
           Logistics Team
         </h3>
         <div className="flex justify-center">
-          <div className="gap my-10 grid w-fit grid-cols-1 grid-rows-5 md:grid-cols-2 md:grid-rows-3 xl:grid-cols-5 xl:grid-rows-1">
+          <div className="my-10 grid gap-5 w-fit grid-cols-1 grid-rows-5 md:grid-cols-2 md:grid-rows-3 xl:grid-cols-5 xl:grid-rows-1">
             <OCPOsition
               image={logistics["kobi.png"]}
               person={"Kobi Vijayakumar"}
@@ -205,7 +234,7 @@ const Committee23 = () => {
           Web Team
         </h3>
         <div className="flex justify-center">
-          <div className="gap my-10 grid w-fit grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
+          <div className="my-10 grid gap-5 w-fit grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
             <OCPOsition
               image={web["sasan.png"]}
               person={"Sasan Dilantha"}

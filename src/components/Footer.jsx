@@ -25,16 +25,50 @@ const Footer = () => {
             <p className="text-md mb-3 text-white">ieeesbuwu@gmail.com</p>
           </div>
           <div className="text-center text-white">
-            <p className="">
-              <span className="font-bold">Ovindu (Chairperson : IEEE UWU SB)</span> <br />{" "}
-              +94 702500806
-            </p>
-            <p className="">
-              <span className="font-bold">
+            <div>
+              <p className="font-bold">
+                Ovindu (Chairperson : IEEE UWU SB)
+              </p>
+              <div className="flex justify-center items-center">
+                <p className="">+94 702500806</p>
+                <a
+                    href="http://linkedin.com/in/ovindujeewangahathnapitiya/"
+                    className="mx-3"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src={
+                        "https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg"
+                      }
+                      alt={"linkedin"}
+                      className="w-4 invert"
+                    />
+                </a>
+              </div>
+            </div>
+            <div>
+              <p className="font-bold mt-2">
                 Milani (Project-Chair : IEEE Openday 2023)
-              </span>
-              <br /> +94 769847175
-            </p>
+              </p>
+              <div className="flex justify-center items-center">
+                <p className="">+94 769847175</p>
+                <a
+                    href="https://www.linkedin.com/in/milani-yogeswaran-17491a206/"
+                    className="mx-3"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src={
+                        "https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg"
+                      }
+                      alt={"linkedin"}
+                      className="w-4 invert"
+                    />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 

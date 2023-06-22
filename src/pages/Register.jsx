@@ -12,7 +12,7 @@ const Register = () => {
 
   const form = () => {
     return (
-      <div className="mt-10 max-w-5xl rounded-sm bg-[#0f172aaa] px-5 py-10 md:w-2/3">
+      <div className="mt-10 max-w-5xl rounded-md bg-[#0f172aaa] px-5 py-10 md:w-11/12">
         <h1 className="mb-6 text-center text-3xl font-bold text-white">
           Registration
         </h1>
@@ -64,7 +64,7 @@ const Register = () => {
             <div className="my-2 justify-between md:flex">
               <span>
                 IEEE Membership ID{" "}
-                <small className="italic">( if you have )</small>
+                <small className="italic">(if you have)</small>
               </span>
               <input
                 type="text"
@@ -136,11 +136,11 @@ const Register = () => {
                   id=""
                   className="rounded-md bg-slate-600 px-4 py-1"
                 >
-                  <option value="1st_year" defaultValue={true}>
+                  <option value="1st year" defaultValue={true}>
                     1st Year
                   </option>
-                  <option value="2nd_year">2nd Year</option>
-                  <option value="3rd_year">3rd Year</option>
+                  <option value="2nd year">2nd Year</option>
+                  <option value="3rd year">3rd Year</option>
                 </select>
               </div>
             </div>
@@ -226,7 +226,7 @@ const Register = () => {
   return (
     <React.Fragment>
       <div
-        className="flex h-[130vh] flex-col items-center justify-center bg-cover px-2 py-5 md:h-screen"
+        className="flex h-auto min-h-screen flex-col items-center justify-center bg-cover px-2 py-16"
         style={{
           backgroundImage:
             "linear-gradient(rgba(0, 7, 27, 0.8) 0%, rgba(54, 57, 66, 0.6)) , " +
@@ -237,7 +237,7 @@ const Register = () => {
           {!submitted ? "Join With Us" : "Thank you !"}
         </h2>
         {!submitted ? form() : confirm()}
-      </div>
+        </div>
     </React.Fragment>
   );
 };
