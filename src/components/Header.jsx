@@ -4,6 +4,11 @@ const HeaderLinks = lazy(() => import("./HeaderLinks"));
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const timeSetter = () => {
+    const count = new Date("June 24, 2023 00:00:00").getTime();
+    const now = new Date().getTime();
+    return count - now;
+  };
 
   const menuSettings = (e) => {
     const MENU = document.getElementById("menu");
@@ -45,12 +50,14 @@ const Header = () => {
           <HeaderLinks link={"/#benefits"} text={"Benefits"} />
           <HeaderLinks link={"/committees"} text={"Committees"} />
           <HeaderLinks link={"/gallery"} text={"Gallery"} />
-          <a
-            href="/register"
-            className="mx-3 mt-5 rounded-md bg-orange-600 px-3 py-1 font-semibold text-white duration-300 ease-in hover:bg-teal-600 md:mt-1"
-          >
-            Register Now
-          </a>
+          {timeSetter() > 0 && (
+            <a
+              href="/register"
+              className="mx-3 mt-5 rounded-md bg-orange-600 px-3 py-1 font-semibold text-white duration-300 ease-in hover:bg-teal-600 md:mt-1"
+            >
+              Register Now
+            </a>
+          )}
         </div>
       </div>
     </React.Fragment>

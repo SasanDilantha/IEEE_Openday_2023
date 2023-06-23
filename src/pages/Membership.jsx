@@ -1,16 +1,10 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useState } from "react";
 import UniImage from "../images/uni.png";
 import axios from "axios";
 
 const Membership = () => {
   const [submitted, setSubmitted] = useState(false);
-  useEffect(() => {
-    const count = new Date("June 25, 2023 08:00:00").getTime();
-    const now = new Date().getTime();
-    if((count - now) > 0){
-      window.location.replace("/error")
-    };
-  });
+
   const form = () => {
     return (
       <div className="mt-10 max-w-5xl rounded-md bg-[#0f172aaa] px-5 py-10 md:w-11/12">

@@ -13,6 +13,12 @@ const Home = () => {
   const [min, setMin] = useState(0);
   const [sec, setSec] = useState(0);
 
+  const timeSetter = () => {
+    const count = new Date("June 24, 2023 00:00:00").getTime();
+    const now = new Date().getTime();
+    return count - now;
+  };
+
   const time_count = async () => {
     const count = new Date("June 25, 2023 08:00:00").getTime();
     const now = new Date().getTime();
@@ -58,12 +64,14 @@ const Home = () => {
             Haven't registered for Open Day 2023 yet? Don't miss out, secure
             your spot by registering now.
           </p>
-          <a
-            href="/register"
-            className="ms-3 mt-5 w-32 rounded-md bg-orange-600 px-3 py-1 font-semibold text-white duration-300 ease-in hover:bg-teal-600 md:mt-10"
-          >
-            Register Now
-          </a>
+          {timeSetter() > 0 && (
+            <a
+              href="/register"
+              className="ms-3 mt-5 w-32 rounded-md bg-orange-600 px-3 py-1 font-semibold text-white duration-300 ease-in hover:bg-teal-600 md:mt-10"
+            >
+              Register Now
+            </a>
+          )}
         </div>
         <div className="flex justify-center">
           <img src={HomeImage} alt="working man" className=" max-w-xl" />
@@ -124,7 +132,7 @@ const Home = () => {
       {/* why you should join with us */}
       <div
         id="benefits"
-        className="flex h-[210vh] sm:h-[150vh] flex-col items-center justify-center bg-cover px-2 py-5 md:h-screen"
+        className="flex h-[210vh] flex-col items-center justify-center bg-cover px-2 py-5 sm:h-[150vh] md:h-screen"
         style={{
           backgroundImage:
             "linear-gradient(rgba(0, 7, 27, 0.8) 0%, rgba(54, 57, 66, 0.6)) , " +
@@ -147,7 +155,6 @@ const Home = () => {
         </h4>
 
         <div className="mt-5 grid w-fit grid-cols-1 grid-rows-4 gap-3 sm:mx-5 md:mt-10 md:grid-cols-2 md:grid-rows-2">
-          
           <NeonCard
             text={
               "Only members who have obtained student branch membership are eligible to apply for positions within the organizing committees of the projects conducted by the student branch."

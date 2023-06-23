@@ -10,14 +10,26 @@ const Membership = lazy(() => import("./pages/Membership"));
 const Committee23 = lazy(() => import("./pages/Committee23"));
 const Committee22 = lazy(() => import("./pages/Committee22"));
 const Gallery = lazy(() => import("./pages/Gallery"));
-const Error = lazy(() => import("./pages/Error"))
+const Error = lazy(() => import("./pages/Error"));
+
+const registrationClose = () => {
+  const count = new Date("June 24, 2023 00:00:00").getTime();
+  const now = new Date().getTime();
+  return count - now > 0 ? false : true;
+};
+
+const membershipOpen = () => {
+  const count = new Date("June 25, 2023 08:00:00").getTime();
+  const now = new Date().getTime();
+  return count - now > 0 ? false : true;
+};
 
 const linkArray = {
   "/": <Home />,
   "/about": <About />,
   "/committees": <Committees />,
-  "/register": <Register />,
-  "/membership": <Membership />,
+  "/register": !registrationClose() ? <Register /> : <Error />,
+  "/membership": membershipOpen() ? <Membership /> : <Error />,
   "/committee23": <Committee23 />,
   "/committee22": <Committee22 />,
   "/gallery": <Gallery />,
