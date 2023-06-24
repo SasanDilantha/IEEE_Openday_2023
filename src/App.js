@@ -42,7 +42,7 @@ function App() {
       <Router>
         <Suspense
           fallback={
-            <p className="flex h-screen items-center justify-center text-lg italic">
+            <p className="flex h-screen items-center justify-center text-lg italic text-white">
               Loading please wait...
             </p>
           }

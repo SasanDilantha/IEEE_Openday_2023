@@ -67,11 +67,14 @@ const Home = () => {
           {timeSetter() > 0 && (
             <a
               href="/register"
-              className="ms-3 mt-5 w-32 rounded-md bg-orange-600 px-3 py-1 font-semibold text-white duration-300 ease-in hover:bg-teal-600 md:mt-10"
+              className="mt-5 w-32 rounded-md bg-orange-600 px-3 py-1 font-semibold text-white duration-300 ease-in hover:bg-teal-600 md:mt-10"
             >
               Register Now
             </a>
           )}
+
+          {timeSetter() < 0 && <h3 className="mt-6 text-red-400 italic text-2xl">
+            Notice : Registration closed</h3>}
         </div>
         <div className="flex justify-center">
           <img src={HomeImage} alt="working man" className=" max-w-xl" />
@@ -105,25 +108,25 @@ const Home = () => {
             />
           </div>
 
-          <div className="mt-10 flex">
-            <div className="mx-3 text-center text-white">
-              <h1 className="text-3xl font-bold ">{day}</h1>
-              <h3 className="font-bold italic">Day</h3>
+          <div className="mt-10 flex bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <div className="mx-4 text-center">
+              <h1 className="text-5xl font-bold ">{day}</h1>
+              <h3 className="italic text-white">Day</h3>
             </div>
 
-            <div className="mx-3 text-center text-white">
-              <h1 className="text-3xl font-bold ">{hour}</h1>
-              <h3 className="font-bold italic">Hour</h3>
+            <div className="mx-5 text-center">
+              <h1 className="text-5xl font-bold ">{hour}</h1>
+              <h3 className="italic text-white">Hour</h3>
             </div>
 
-            <div className="mx-3 text-center text-white">
-              <h1 className="text-3xl font-bold ">{min}</h1>
-              <h3 className="font-bold italic">Minute</h3>
+            <div className="mx-5 text-center">
+              <h1 className="text-5xl font-bold ">{min}</h1>
+              <h3 className="italic text-white">Minute</h3>
             </div>
 
-            <div className="mx-3 text-center text-white">
-              <h1 className="text-3xl font-bold ">{sec}</h1>
-              <h3 className="font-bold italic">Second</h3>
+            <div className="mx-5 text-center">
+              <h1 className="text-5xl font-bold ">{sec}</h1>
+              <h3 className="italic text-white">Second</h3>
             </div>
           </div>
         </div>
@@ -147,12 +150,6 @@ const Home = () => {
           Benefits of having membership inside IEEE Uva Wellassa University
           Student Branch
         </h3>
-
-        <h4 className="mt-5 text-center text-lg text-white">
-          The organizing committees of the projects conducted by the student
-          branch are only allowed to be applied by the members who have taken up
-          student branch membership.
-        </h4>
 
         <div className="mt-5 grid w-fit grid-cols-1 grid-rows-4 gap-3 sm:mx-5 md:mt-10 md:grid-cols-2 md:grid-rows-2">
           <NeonCard
