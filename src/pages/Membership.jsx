@@ -187,13 +187,14 @@ const Membership = () => {
             </div>
             <div className="my-2 justify-between md:flex">
               <span>
-                IEEE Membership ID{" "}
-                <small className="italic">(if you have)</small>
+                IEEE UWU SB Membership ID
+                <span className="text-xs font-extrabold text-red-600"> *</span>
               </span>
               <input
                 type="text"
                 name="Membership_ID"
                 id=""
+                required
                 className="w-full rounded-md bg-slate-600 p-1 focus:outline-none md:w-2/3"
               />
             </div>
