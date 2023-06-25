@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkieee_open_day=self.webpackChunkieee_open_day||[]).push([[307],{7307:function(e,n,t){t.r(n);var s=t(2791),c=t(184);n.default=function(){return(0,c.jsx)(s.Fragment,{children:(0,c.jsx)("div",{className:"w-screen flex h-screen justify-center items-center",children:(0,c.jsx)("h1",{className:"text-6xl text-white",children:"404 Not Found."})})})}}}]);
+//# sourceMappingURL=307.9e86600d.chunk.js.map

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkieee_open_day=self.webpackChunkieee_open_day||[]).push([[709],{1709:function(e,t,n){n.r(t);n(2791);var d=n(184);t.default=function(e){var t=e.link,n=e.text;return(0,d.jsx)("a",{href:t,className:"mx-4 my-3 w-60 font-semibold text-white hover:text-[#41df6d] md:my-0 md:w-auto "+(window.location.href.includes(t)?"text-[#41df6d]":""),children:n})}}}]);
+//# sourceMappingURL=709.536cc6dd.chunk.js.map
