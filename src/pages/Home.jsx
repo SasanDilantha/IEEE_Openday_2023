@@ -30,10 +30,12 @@ const Home = () => {
     const day = hour * 24;
 
     // calculating
-    setDay(Math.floor(gap / day));
-    setHour(Math.floor((gap % day) / hour));
-    setMin(Math.floor((gap % hour) / min));
-    setSec(Math.floor((gap % min) / sec));
+    if (gap > 0) {
+      setDay(Math.floor(gap / day));
+      setHour(Math.floor((gap % day) / hour));
+      setMin(Math.floor((gap % hour) / min));
+      setSec(Math.floor((gap % min) / sec));
+    }
   };
   useEffect(() => {
     setInterval(time_count, 1000);
@@ -73,8 +75,11 @@ const Home = () => {
             </a>
           )}
 
-          {timeSetter() < 0 && <h3 className="mt-6 text-red-400 italic text-2xl">
-            Notice : Registration closed</h3>}
+          {timeSetter() < 0 && (
+            <h3 className="mt-6 text-2xl italic text-red-400">
+              Notice : Registration closed
+            </h3>
+          )}
         </div>
         <div className="flex justify-center">
           <img src={HomeImage} alt="working man" className=" max-w-xl" />
