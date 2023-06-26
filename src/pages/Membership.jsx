@@ -67,6 +67,7 @@ const Membership = () => {
               <input
                 type="date"
                 name="DOB"
+                required
                 id=""
                 className="w-full rounded-md bg-slate-600 p-1 focus:outline-none md:w-2/3"
               />
@@ -75,7 +76,13 @@ const Membership = () => {
           <div className="">
             <div className="">
               <div className="mb-3">
-                <span>Degree Program</span>
+                <span>
+                  Degree Program
+                  <span className="text-xs font-extrabold text-red-600">
+                    {" "}
+                    *
+                  </span>
+                </span>
                 <div className="ms-10">
                   <input
                     type="radio"
@@ -118,6 +125,7 @@ const Membership = () => {
                   <label htmlFor="E-TECH">&ensp;E-TECH</label>
                   <br />
                   <input
+                    required
                     type="radio"
                     id="others"
                     name="Degree_Program"
@@ -128,9 +136,21 @@ const Membership = () => {
                 </div>
               </div>
               <div className="mb-3">
-                <span>Gender</span>
+                <span>
+                  Gender
+                  <span className="text-xs font-extrabold text-red-600">
+                    {" "}
+                    *
+                  </span>
+                </span>
                 <div className="ms-10">
-                  <input type="radio" id="male" name="Gender" value="Male" />
+                  <input
+                    type="radio"
+                    id="male"
+                    name="Gender"
+                    value="Male"
+                    required
+                  />
                   <label htmlFor="Male">&ensp;Male</label>
                   <br />
                   <input
@@ -142,7 +162,10 @@ const Membership = () => {
                   <label htmlFor="Female">&ensp;Female</label>
                 </div>
               </div>
-              <span>Year</span>
+              <span>
+                Year
+                <span className="text-xs font-extrabold text-red-600"> *</span>
+              </span>
               <div className="">
                 <select
                   name="Year"
@@ -194,6 +217,7 @@ const Membership = () => {
                 type="text"
                 name="Membership_ID"
                 id=""
+                pattern="[0-9]{9}"
                 required
                 className="w-full rounded-md bg-slate-600 p-1 focus:outline-none md:w-2/3"
               />
