@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.a4d96bf0.css",
-    "main.js": "/static/js/main.77ba1bc4.js",
+    "main.js": "/static/js/main.63cbae2a.js",
     "static/js/84.6fbfaf91.chunk.js": "/static/js/84.6fbfaf91.chunk.js",
     "static/js/587.5ebf320f.chunk.js": "/static/js/587.5ebf320f.chunk.js",
     "static/js/43.f5cce89c.chunk.js": "/static/js/43.f5cce89c.chunk.js",
@@ -118,7 +118,7 @@
     "static/media/ieee_sb_logo.png": "/static/media/ieee_sb_logo.79764e1ae1d328954c1b.png",
     "index.html": "/index.html",
     "main.a4d96bf0.css.map": "/static/css/main.a4d96bf0.css.map",
-    "main.77ba1bc4.js.map": "/static/js/main.77ba1bc4.js.map",
+    "main.63cbae2a.js.map": "/static/js/main.63cbae2a.js.map",
     "84.6fbfaf91.chunk.js.map": "/static/js/84.6fbfaf91.chunk.js.map",
     "587.5ebf320f.chunk.js.map": "/static/js/587.5ebf320f.chunk.js.map",
     "43.f5cce89c.chunk.js.map": "/static/js/43.f5cce89c.chunk.js.map",
@@ -138,6 +138,6 @@
   },
   "entrypoints": [
     "static/css/main.a4d96bf0.css",
-    "static/js/main.77ba1bc4.js"
+    "static/js/main.63cbae2a.js"
   ]
 }
